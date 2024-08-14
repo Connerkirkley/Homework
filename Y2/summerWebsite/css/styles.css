@@ -2,10 +2,17 @@
   font-family: crumble;
   src: url(../fonts/CRUMBLE.otf);
 }
+.bigFont {
+  font-size: 100px;
+}
+
 .crumble {
   font-family: crumble;
 }
 
 body {
-  background-color: aquamarine;
+  display: grid;
+}
+body grid .mainBackground {
+  background-color: aqua;
 }/*# sourceMappingURL=styles.css.map */
