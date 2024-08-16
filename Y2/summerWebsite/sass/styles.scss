@@ -1,3 +1,5 @@
+@use '../partials/navbar';
+
 @font-face {
     font-family: crumble;
     src: url(../fonts/CRUMBLE.otf);
@@ -14,9 +16,22 @@
 
 body{
     display: grid;
-    grid-template-columns: ;
-    grid-template-rows: ;
-    .mainBackground{
-        background-color: aqua;
+    grid-template-columns: [start] 1fr [end];
+    grid-template-rows:[start] 110px [second] 120px [third] 80px [fourth] 1fr [end];
+    background-color: rgba(170, 103, 10, 0.762);
+
+    .mainGrid{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: [start] 1fr [second] 450px [third] 140px [fourth] 450px [fith] qfr [end];
+        grid-template-rows: [start] 350px [second] 30px [third] 200px [fourth] 5px [end];
+    }
+
+    .mainText{
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        font-size: 4vw;
     }
 }
