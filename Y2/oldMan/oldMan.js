@@ -785,12 +785,31 @@ const input = [
 
 
 
+    //"FFFFFBB" =  
+
+
 let findAllDugSquares = function(data){
     data.forEach(square => {
         square = square.split('')
-        square = [[square[0], square[0], square[0], square[0], square[0], square[0], square[0]], [square[0], square[0], square[0]]]
-        
+        square = [[square[0], square[1], square[2], square[3], square[4], square[5], square[6]], [square[7], square[8], square[9]]]
+        console.log(square);
+        let scope = [1, 128]
+        square[0].forEach(nugget => {
+            let midpoint = Math.floor((scope[0] + scope[1]) / 2)
+            console.log('here');
+            if (nugget === "F"){
+                scope[1] = midpoint
+                console.log(scope);
+            }
+            else {
+                scope[0] = midpoint
+                console.log(scope);
+            }
+            let hight = (scope[0] + scope[1] - 1) / 2
+            console.log(hight);
+        })
     });
+    
     return true
 }
 
