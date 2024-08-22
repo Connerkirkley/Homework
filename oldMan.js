@@ -788,7 +788,9 @@ const input = [
     //"FFFFFBB" =  
 
 
-let findAllDugSquares = function(data){
+let findAllDugSquares = function(data, type = 'highLow'){
+    let allDugSquares = []
+    let thing
     data.forEach(square => {
         square = square.split('')
         square = [[square[0], square[1], square[2], square[3], square[4], square[5], square[6]], [square[7], square[8], square[9]]]
@@ -805,12 +807,17 @@ let findAllDugSquares = function(data){
                 scope[0] = midpoint
                 console.log(scope);
             }
-            let hight = (scope[0] + scope[1] - 1) / 2
-            console.log(hight);
         })
-    });
-    
-    return true
+        let hight = (scope[0] + scope[1] - 1) / 2
+        console.log(hight);
+        allDugSquares.push(hight)});
+    if (type === 'all'){
+        thing = allDugSquares
+    }
+    else if (type === 'highLow'){
+        thing = [Math.max(...allDugSquares), Math.min(...allDugSquares)]
+    }
+    return thing
 }
 
 
@@ -819,6 +826,7 @@ let findAllDugSquares = function(data){
 let runAllPrograms = function(rata){
     if (findAllDugSquares(rata)){
         console.log('FindAllDugSquares ran correctly');
+        console.log(findAllDugSquares(rata));
     }
     else{
         console.log('FindAllDugSquares ran incorrectly');
