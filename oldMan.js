@@ -797,6 +797,36 @@ let findAllDugSquares = function(data, type = 'highLow'){
         // console.log(square);
         let scope = [1, 128]
         let range = [1, 8]
+        if (type == 'convert'){
+            square[0].forEach(nugget => {
+                let midpoint = Math.floor((scope[0] + scope[1]) / 2)
+                // console.log('here');
+                if (nugget === "F"){
+                    scope[1] = midpoint
+                    // console.log(scope);
+                }
+                else {
+                    scope[0] = midpoint
+                    // console.log(scope);
+                }
+            })
+            square[1].forEach(nugget => {
+                let midpoint = Math.floor((range[0] + range[1]) / 2)
+                // console.log('here');
+                if (nugget === "L"){
+                    range[1] = midpoint
+                    // console.log(range);
+                }
+                else {
+                    range[0] = midpoint
+                    // console.log(range);
+                }
+            })
+            let row = scope[0]
+            let col = range[0]
+            allDugSquares.push([row, col])
+        }
+        else{
         square[0].forEach(nugget => {
             let midpoint = Math.floor((scope[0] + scope[1]) / 2)
             // console.log('here');
@@ -825,8 +855,8 @@ let findAllDugSquares = function(data, type = 'highLow'){
         let col = range[0]
         // console.log(row);
         // console.log(col);
-        let dugSquare = row * 8 + col
-        allDugSquares.push(dugSquare)});
+        let dugSquare = (row * 8) + col
+        allDugSquares.push(dugSquare)}});
     if (type == 'all'){
         console.log('all');
         thing = allDugSquares
@@ -839,44 +869,85 @@ let findAllDugSquares = function(data, type = 'highLow'){
         console.log('missing');
         thing = [allDugSquares, [Math.max(...allDugSquares), Math.min(...allDugSquares)]]
     }
+    else if(type == 'convert'){
+        console.log('convert');
+        thing = allDugSquares
+    }
     return thing
 }
 
-let findMissingSquares = function(input){
-    let missingSquaresData = findAllDugSquares(input, 'missing')
-    let missingSquares = []
-    for (let i = missingSquaresData[1][1]; i <= missingSquaresData[1][0]; i++){
-        if (!missingSquaresData[0].includes(i)){
-            missingSquares.push(i)
-        }}
-    console.log(missingSquaresData);
-    return missingSquares
+// let findMissingSquares = function(data){
+//     let missingSquaresData = findAllDugSquares(data, 'missing')
+//     let missingSquares = []
+//     for (let i = missingSquaresData[1][1]; i <= missingSquaresData[1][0]; i++){
+//         if (!missingSquaresData[0].includes(i)){
+//             missingSquares.push(i)
+//         }}
+//     console.log(missingSquaresData);
+//     return missingSquares
+// }
+
+
+
+
+// let findMissingThings = function(data){
+//     let missingSquaresData = findAllDugSquares(data, 'missing')
+//     let sorted = missingSquaresData[0].sort((a, b) => (a - b))
+
+// }
+
+
+let convertBackToString = function(data){
+    let rata = findAllDugSquares(data, 'convert')
+    // console.log(rata);
+    let allStrings = []
+    rata.forEach(num => {
+        let tempString = []
+        let going = true
+        let trucking = true
+        scope = [1, 128]
+        range = [1, 8]
+        while (going){
+            let midpoint = Math.floor((scope[0] + scope[1]) / 2)
+            if (num[0] <= midpoint){
+                tempString.push('F')
+                scope[1] = midpoint
+            }
+            else if (num[0] >= midpoint){
+                tempString.push('B')
+                scope[0] = midpoint
+            }
+            else if (tempString.length == 7){
+                going == false
+            }
+        }
+        while (trucking){
+            let midpoint = Math.floor((range[0] + range[1]) / 2)
+            if (num[1] <= midpoint){
+                tempString.push('F')
+                range[1] = midpoint
+            }
+            else if (num[1] >= midpoint){
+                tempString.push('B')
+                range[0] = midpoint
+            }
+            else if (tempString.length == 3){
+                trucking == false
+            }
+        }
+        console.log(tempString);
+        allStrings.push(tempString.join(''))
+
+        console.log(midpoint);
+    })
+    return allStrings
 }
 
 
 
+// findAllDugSquares()
+
+console.log(convertBackToString(input))
 
 
-
-
-let runAllPrograms = function(rata){
-    if (findAllDugSquares(rata)){
-        console.log('FindAllDugSquares ran correctly');
-        //Update Below function for types of output instead of above function to not question reality for an hour.
-        // console.log(findAllDugSquares(rata));
-    }
-    else{
-        console.log('FindAllDugSquares ran incorrectly');
-    }
-    
-    if (findMissingSquares(rata)){
-        console.log('FindMissingSquares ran correctly');
-        console.log(findMissingSquares(rata));
-    }
-    else{
-        console.log('FindMissingSquares ran incorrectly');
-    }
-
-}
-
-runAllPrograms(input)
+// findMissingSquares(input)
