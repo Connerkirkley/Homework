@@ -794,31 +794,67 @@ let findAllDugSquares = function(data, type = 'highLow'){
     data.forEach(square => {
         square = square.split('')
         square = [[square[0], square[1], square[2], square[3], square[4], square[5], square[6]], [square[7], square[8], square[9]]]
-        console.log(square);
+        // console.log(square);
         let scope = [1, 128]
+        let range = [1, 8]
         square[0].forEach(nugget => {
             let midpoint = Math.floor((scope[0] + scope[1]) / 2)
-            console.log('here');
+            // console.log('here');
             if (nugget === "F"){
                 scope[1] = midpoint
-                console.log(scope);
+                // console.log(scope);
             }
             else {
                 scope[0] = midpoint
-                console.log(scope);
+                // console.log(scope);
             }
         })
-        let hight = (scope[0] + scope[1] - 1) / 2
-        console.log(hight);
-        allDugSquares.push(hight)});
-    if (type === 'all'){
+        square[1].forEach(nugget => {
+            let midpoint = Math.floor((range[0] + range[1]) / 2)
+            // console.log('here');
+            if (nugget === "L"){
+                range[1] = midpoint
+                // console.log(range);
+            }
+            else {
+                range[0] = midpoint
+                // console.log(range);
+            }
+        })
+        let row = scope[0]
+        let col = range[0]
+        // console.log(row);
+        // console.log(col);
+        let dugSquare = row * 8 + col
+        allDugSquares.push(dugSquare)});
+    if (type == 'all'){
+        console.log('all');
         thing = allDugSquares
     }
-    else if (type === 'highLow'){
+    else if (type == 'highLow'){
+        console.log('highLow');
         thing = [Math.max(...allDugSquares), Math.min(...allDugSquares)]
+    }
+    else if (type == 'missing'){
+        console.log('missing');
+        thing = [allDugSquares, [Math.max(...allDugSquares), Math.min(...allDugSquares)]]
     }
     return thing
 }
+
+let findMissingSquares = function(input){
+    let missingSquaresData = findAllDugSquares(input, 'missing')
+    let missingSquares = []
+    for (let i = missingSquaresData[1][1]; i <= missingSquaresData[1][0]; i++){
+        if (!missingSquaresData[0].includes(i)){
+            missingSquares.push(i)
+        }}
+    console.log(missingSquaresData);
+    return missingSquares
+}
+
+
+
 
 
 
@@ -826,11 +862,21 @@ let findAllDugSquares = function(data, type = 'highLow'){
 let runAllPrograms = function(rata){
     if (findAllDugSquares(rata)){
         console.log('FindAllDugSquares ran correctly');
-        console.log(findAllDugSquares(rata));
+        //Update Below function for types of output instead of above function to not question reality for an hour.
+        // console.log(findAllDugSquares(rata));
     }
     else{
         console.log('FindAllDugSquares ran incorrectly');
     }
+    
+    if (findMissingSquares(rata)){
+        console.log('FindMissingSquares ran correctly');
+        console.log(findMissingSquares(rata));
+    }
+    else{
+        console.log('FindMissingSquares ran incorrectly');
+    }
+
 }
 
 runAllPrograms(input)
