@@ -16,3 +16,17 @@ const server = http.createServer((req, res) => {
 
 
 server.listen('5000')
+
+
+
+//request holds a very large object that can be querryed and tested
+//responce is how we respond and we can edit this without like, losing user data.
+
+
+
+
+
+
+
+
+
