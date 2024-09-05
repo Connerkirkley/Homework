@@ -1,3 +1,114 @@
-((((1x8)x1024)x1024)x1024) gigaByte
+1st puzzle
+
+prompt:   Sometimes for a tasty treat, all you need to do is take a big byte.
+
+hidden hint:   In the same color as the background, the text '8589934592' will be under the main text.
+
+Thinking process:   The key phrase 'big byte' is supposed to let the reader know it's something with computer memory. The hidden hint '8589934592' it the ammount of Bits in a gigaByte.
+
+answer:   gigaByte
+
+------------------------------------------------------------------------------------------------------------------------------
+
+2nd puzzle
+
+At the end of the screening, all you need to do is take a pill and everything will be all the same.
+
+In the same color as the background, the text 'Screen rays' will be under the main text.
+
+Without the context of 'The matrix' it could be hard to complete the puzzle, but with 'screening' and the hint being 'Screen rays.' I think blueLight must come accross the head of the reader at some point.
+
+blueLight
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+3rd puzzle
+
+I couldn't tell a lie about numbers, all i know is it comes between 233 and 610.
+
+In the same color as the background, the text 'Thesaurus' will be under the main text.
+
+With some processing, they can find fib is a synonym of lie. fib being short Fibonacci and 233 and 610 being on his Sequence and 377 between them.
+
+377
+
+------------------------------------------------------------------------------------------------------------------------------
+
+4th puzzle
+
+It comes between the creation and the destruction. It serves as a medium of life. You know it as?
+
+In the same color as the background, the text '10 lexicon characters' will be under the main text.
+
+Between creation and destruction and serves as all life. Some thinking later you think 'everything falls into that catagory.' 
+
+everything
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+5th puzzle
+
+Sometimes things are ment to rot. Sometimes you must find the answer hidden in the rot. Change things around like a wheel and you can find the answer.
+
+In the same color as the background, the text 'cpuygt' will be under the main text.
+
+This puzzle is a rot cypher and rot is said twice. It is a rot 2 cypher.
+
+answer
+
+------------------------------------------------------------------------------------------------------------------------------
+
+6th puzzle
+
+After 64 attemps, you want somthing done right you make a script. Not something with actors or directors, but science.
+
+In the same color as the background, the text '64 digits later you get where you want to be' will be under the main text.
+
+It's a base 64 cypher and '64 digits later' is a hint to encode something.
+
+c2NpZW5jZQ==
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+7th puzzle
+
+When you try to join, you can always make progress. But the goal is always getting farther and if you can keep going, you can get to your goal before eternity. Before you snap back to reality like a rubber rope, think about your investment, what have you been doing?.
+
+In the same color as the background, the text 'celery, peanut butter, raisins' will be under the main text.
+
+The riddle is supposed to get you thinking about a moving goal but you can eventually reach given a lot of time. The hint gives you ants on a log and with all of it, you get the ant on a rubber rope theory. the answer is 'antOnARubberRope'
+
+antOnARubberRope
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+8th puzzle
+
+Creating something takes a lot of effort, sometimes the answer is right in front of you.
+
+there is not deeper hint on this one
+
+your using a computer of some type to view this. Those use a SCREEN.
+
+screen
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+9th puzzle
+
+We want to help you, but your making this difficult. Maybe you should think back 5 years, you will find your solution deeper within.
+
+In the same color as the background, the text '' will be under the main text.
+
+
+
+
+
+
+
+
+
+
+
 
 
