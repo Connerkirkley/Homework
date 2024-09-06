@@ -60,11 +60,11 @@ answer
 
 6th puzzle
 
-After 64 attemps, you want somthing done right you make a script. Not something with actors or directors, but science.
+After 64 attempt, you want something done right you make a script. Not something with actors or directors, but science.
 
 In the same color as the background, the text '64 digits later you get where you want to be' will be under the main text.
 
-It's a base 64 cypher and '64 digits later' is a hint to encode something.
+It's a base 64 cipher and '64 digits later' is a hint to encode something.
 
 c2NpZW5jZQ==
 
@@ -98,17 +98,19 @@ screen
 
 We want to help you, but your making this difficult. Maybe you should think back 5 years, you will find your solution deeper within.
 
-In the same color as the background, the text '' will be under the main text.
+In the same color as the background, the text '5 years ago you were how many digits?' will be under the main text.
 
+it goes back to the hint on question 4 and references the hint.
 
+10
 
+-----------------------------------------------------------------------------------------------------------------------------
 
+10th puzzle
 
+You've made it here, congratulations. What have you accomplished really? All 9 answers and your still not in? have fun figuring out this one, its looping.
 
-
-
-
-
+In the same color as the background, the text 'everything you have done so far over and over' will be under the main text.
 
 
 
