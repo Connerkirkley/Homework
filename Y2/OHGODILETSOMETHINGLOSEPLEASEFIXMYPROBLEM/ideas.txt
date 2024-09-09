@@ -96,13 +96,13 @@ screen
 
 9th puzzle
 
-We want to help you, but your making this difficult. Maybe you should think back 5 years, you will find your solution deeper within.
+We want to help you, but your making this difficult. Maybe you should think back 5 years, you will find your solution deeper within. Sometimes you just need to count.
 
-In the same color as the background, the text '' will be under the main text.
+In the same color as the background, the text 'Hint' will be under the main text.
 
+I refer to the hint of question 4.
 
-
-
+10
 
 
 
