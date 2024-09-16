@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express()
-const PORT = 5000
+const PORT = 3000
 
 const peopleData = require('./data/people.js')
 
@@ -28,7 +28,7 @@ app.get('/about', (req, res) => {
 })
 
 app.listen(PORT,()=>{
-    console.log('listening on port 5000...');
+    console.log('listening on port 3000...');
 })
 
 
